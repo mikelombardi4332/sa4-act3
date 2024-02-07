@@ -18,6 +18,12 @@ while incorrect_ans:
     if guess == number:
         print("Congratulations! You guessed the right number.")
         break
+    elif guess > number:
+        print("Your guess was too high.\n")
+        total_guesses -=1
+    elif guess < number:
+        print("Your guess is too low.\n")
+        total_guesses -=1 
     else:
         print(f"Sorry! Try again.")
         total_guesses -=1
