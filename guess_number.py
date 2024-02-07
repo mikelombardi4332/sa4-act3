@@ -13,5 +13,9 @@ while incorrect_ans:
     if guess == number:
         print("Congratulations! You guessed the right number.")
         break
+    elif guess > number:
+        print("Your guess was too high.\n")
+    elif guess < number:
+        print("Your guess is too low.\n") 
     else:
-        print(f"Sorry! Try again.")
+        print(f"Sorry! Try again.\n")
