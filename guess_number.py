@@ -1,8 +1,17 @@
 number = 10
-print("I'm thinking of a number...")
-guess = int(input("What number am I thinking of? "))
+incorrect_ans = True
 
-if guess == number:
-    print("Congratulations! You guessed the right number.")
-else:
-    print(f"Sorry! The number was {number}.")
+while incorrect_ans:
+    print("I'm thinking of a number...\n")
+    guess = input("What number am I thinking of? (Enter q to quit) ")
+    if guess == "q":
+        incorrect_ans = False
+        print(f"The correct answer is: {number}")
+        break
+    guess = int(guess)
+    
+    if guess == number:
+        print("Congratulations! You guessed the right number.")
+        break
+    else:
+        print(f"Sorry! Try again.")
